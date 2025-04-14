@@ -8,4 +8,4 @@ apt install git curl -y
 #neovim
 apt install neovim -y
 
-./zsh/setup_zsh.sh
+sh ./zsh/setup_zsh.sh

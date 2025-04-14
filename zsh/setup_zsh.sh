@@ -14,7 +14,14 @@ git clone https://github.com/zsh-users/zsh-completions \
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-DEST_ZSHRC="$HOME/.zshrc"
-SOURCE_ZSHRC="./zshrc"
 
-cp -f $SOURCE_ZSHRC $DEST_ZSHRC
+
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Define the source and destination paths
+DEST_ZSHRC="$HOME/.zshrc"
+SOURCE_ZSHRC="$SCRIPT_DIR/zshrc"  # Use the absolute path for the source file
+
+# Copy the file
+cp -f "$SOURCE_ZSHRC" "$DEST_ZSHRC"
