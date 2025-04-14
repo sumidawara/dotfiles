@@ -21,7 +21,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Define the source and destination paths
 DEST_ZSHRC="$HOME/.zshrc"
-SOURCE_ZSHRC="$SCRIPT_DIR/zshrc"  # Use the absolute path for the source file
+SOURCE_ZSHRC="$SCRIPT_DIR/.zshrc"  # Use the absolute path for the source file
 
 # Copy the file
 cp -f "$SOURCE_ZSHRC" "$DEST_ZSHRC"
